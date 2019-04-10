@@ -1,0 +1,445 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+}
+p {
+	margin: 0; padding: 0;
+}
+* {
+	box-sizing: border-box;
+}
+
+
+/* SELECTION */
+::-moz-selection { background: #42275A; color: #FFF; }
+::selection { background: #42275A; color: #FFF; }
+
+
+/* BACKGROUND */
+#background {
+	filter: blur(3px);
+}
+
+
+/* START BTN */
+.loader-start {
+	background: linear-gradient(65deg,#42275A, #734B6D);
+	position: fixed;
+	margin: 0;
+	z-index: 9999999;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 2s;
+}
+
+.start {
+	padding-left: 20px;
+	padding-right: 20px;
+	
+	height: 80px;
+	line-height: 85px;
+	
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+	font-size: 30px;
+	font-family: "Hiragino Kahu Gothic Pro", sans-serif;
+	
+	border: 0;
+	border-radius: 5px;
+
+	background-color: white;
+	color: #734B6D;
+
+	transition-duration: 0.2s;
+
+	cursor: pointer;
+}
+.start:hover {
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* LOADER */
+.loader-block {
+	display: block;
+	position: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background: #FFF;
+	border-bottom: 1px solid #ECECEC;
+	transition: 0.3s;
+	z-index: 99;
+}
+.loader {
+	display: block;
+	position: relative;
+	margin: 35vh auto;
+	width: 400px;
+	height: 100%; 
+	transition: 1.5s;
+}
+
+.loader-interrogation {
+	position: absolute;
+
+	width: 25%;
+	left: calc(50% - 12.5%);
+	transition: 0.3s;
+}
+
+.loader-eliquae {
+	position: absolute;
+	margin-top: 4%;
+	width: 75%;
+	right: 25%;
+	opacity: 0;
+	transition: 0.3s;
+}
+
+
+/* DITITLE */
+.dititle {
+	margin-bottom: 40px;
+	font-family: "Hiragino Kahu Gothic Pro", sans-serif;
+	font-size: 40px;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+
+
+/* HOME POPUP */
+.popup {
+	display: none;
+	position: absolute;
+	padding: 40px;
+	top: 20%; left: 20%;
+	height: 60%;
+	width: 60%;
+	border-radius: 5px;
+	color: white;
+	z-index: 9;
+	animation: zoom .25s;
+	background: linear-gradient(65deg, #42275A, #734B6D);
+}
+.popup a {
+	position: absolute;
+	bottom: 20px; left: 20px;
+	color: #FFF;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: "Hiragino Kahu Gothic Pro", sans-serif;
+	font-size: 14px;
+}
+.popup .wrapper {
+	font-family: "Hiragino Kahu Gothic Pro", sans-serif;
+	font-style: italic;
+	font-size: 20px;
+	color: #CCC;
+	letter-spacing: 1px;
+}
+.popup > .reli-popup {
+	position: absolute;
+	top: 0;
+	right: 50px;
+	width: 150px;
+	opacity: 0.5;
+	z-index: -1;
+}
+input#ans {
+	width: 70%;
+	margin-top: 20px;
+	padding: 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	color: #FFF;
+	background: rgba(255, 255, 255, 0.1);
+}
+button#validate {
+	display: block;
+	margin-top: 20px;
+
+	padding-left: 20px;
+	padding-right: 20px;
+	
+	height: 40px;
+	line-height: 45px;
+	
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+	font-size: 16px;
+	font-family: "Hiragino Kahu Gothic Pro", sans-serif;
+	
+	border: 0;
+	border-radius: 5px;
+
+	background-color: white;
+	color: #734B6D;
+
+	transition-duration: 0.2s;
+
+	cursor: pointer;
+}
+button#validate:hover {
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* CONTAINER */
+.container {
+	display: block;
+	position: relative;
+	padding: 50px;
+	width: 100%;
+}
+
+/* APP CONTAINER */
+.app {
+	background: linear-gradient(65deg, #42275A, #734B6D);
+	color: #FFF;
+}
+
+#infos {
+    display: flex;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#infos #phone {
+    width: 300px;
+    height: 300px;
+    margin-right: 50px;
+}
+
+#infos p {
+	padding: 50px;
+    color: white;
+    font-size: 22px;
+	font-family: "Hiragino Kahu Gothic Pro", sans-serif;
+	word-spacing: 2px;
+	line-height: 30px;
+}
+
+#infos #download {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+
+}
+#infos #android {
+    width: 150px;
+ 	height: 60px;
+ 	margin-top: -5px;
+}
+
+#infos #apple {
+    width: 130px;
+}
+
+#items {
+	display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    width: 100%;
+    color: #42275A;
+}
+
+#items div {
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#items p {
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+	padding: 25px;
+	letter-spacing: 1px;
+	line-height: 24px;
+}
+
+#items span {
+    font-family: Beauty in the Ordinary;
+    font-size: 30pt;
+}
+
+
+/* FOOTER */
+
+footer {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	padding: 10px;
+	width: 100%;
+	height: 80px;
+}
+footer img {
+	height: 60px;
+}
+
+/* FOOTER ITEMS SECTIONS */
+footer .item {
+	height: 60px;
+}
+
+/* SECTION  MINISTERE*/
+footer .ministere {
+	display: flex;
+	justify-content: space-around;
+	width: 200px;
+	color: #363636;
+
+	font-size: 12px;
+	letter-spacing: 1px;
+	font-style: italic;
+	font-family: "Hiragino Kahu Gothic Pro", sans-serif;
+	line-height: 20px;
+
+  	transition: 0.2s;
+}
+footer .ministere img {
+	-webkit-filter: grayscale(100%);
+  	filter: grayscale(100%);
+}
+footer .ministere img:hover {
+	-webkit-filter: grayscale(0%);
+  	filter: grayscale(0%);
+}
+footer .ministere span {
+	margin-top: 9px;
+}
+
+/* SECTION SOCIALS */
+footer .socials {
+	line-height: 70px;
+}
+footer .socials a {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 30px;
+	color: #999;
+	transition: 0.2s;
+}
+footer .socials a:hover{
+	color: #42275A;
+}
+/*footer {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	width: 100%;
+	height: 80px;
+	line-height: 150px;
+}
+
+footer .socials {
+	display: block;
+	height: 80px;
+	line-height: 80px,
+}
+footer .socials a {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 50px;
+	color: #999;
+	transition: 0.2s;
+}
+footer .socials a:hover{
+	color: #42275A;
+}
+
+footer .ministere {
+	display: block;
+	height: 80px;
+	-webkit-filter: grayscale(100%);
+  	filter: grayscale(100%);
+  	transition: 0.2s;
+}
+footer .ministere:hover {
+	-webkit-filter: grayscale(0%);
+  	filter: grayscale(0%);
+}
+footer .ministere img {
+	height: 80px;
+}
+
+footer .reliquae-footer-logo {
+	display: block;
+	height: 80px;
+	bottom: 20px; left: 20px;
+}*/
+
+
+/* LOGO LOADER */
+@keyframes reliquae {
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+#dot {
+	opacity: 0;
+	transition-duration: 0.3s;
+}
+
+#letter-question-mark {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	stroke-width: 35;
+	animation: reliquae 4s linear forwards;
+}
+
+#letter-r {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	stroke-width: 35;
+	animation: reliquae 2s linear forwards 2.5s;
+}
+
+#color {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    animation: fading-color 3s normal forwards linear;
+	animation-delay: 3.7s;
+}
+
+@keyframes fading-color {
+    100% {opacity: 1;}
+}
+
+#no-color {
+    opacity: 0;
+    width: 100%;
+	height: 100vh;
+	animation: fading-white 3s normal forwards ease-in-out;
+    animation-delay: 3.1s;
+}
+
+@keyframes fading-white {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes zoom {
+	from {
+	  transform: scale(0);
+	}
+	to {
+	  transform: scale(1);
+	}
+  }

@@ -1,0 +1,70 @@
+@media screen and (max-width: 1050px) {
+	#items div{
+		width: 250px;
+		height: 320px;
+	}
+}
+@media screen and (max-width: 1000px) {
+	.popup {
+		width: 100%;
+		left: 0; top: 80px; bottom: 0;
+		height: calc(100vh - 80px);
+		border-radius: 0px;
+	}
+}
+@media screen and (max-width: 900px) {
+	#items, #infos{
+		justify-content: center;
+		flex-direction: column;
+	}
+	#items div{
+		margin-bottom: 50px;
+		height: 200px;
+		width: 100%;
+	}
+	#infos #phone {
+		height: auto;
+		width: 100%;
+	}
+}
+@media screen and (max-width: 700px) {
+
+	.popup > .reli-popup {
+		opacity: 0.3;
+	}
+	input#ans {
+		width: 100%;
+	}
+	#infos {
+		padding-left: 0px;
+    	padding-right: 0px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	footer {
+		height: 140px;
+		justify-content: center;
+	}
+	footer .ministere {
+		position: absolute;
+		bottom: 10px; right: 10px;
+		width: 250px;
+	}
+	footer .reliquae-footer-logo {
+		position: absolute;
+		bottom: 10px; left: 10px;
+	}
+
+	#items div{
+		margin-bottom: 50px;
+		height: 300px;
+		width: 100%;
+	}
+
+	#infos p {
+		padding: 20px;
+	}
+
+}
